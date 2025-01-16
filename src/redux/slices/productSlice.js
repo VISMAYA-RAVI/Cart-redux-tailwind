@@ -5,7 +5,8 @@ import axios from "axios";
 // action return promise
 export const fetchProducts = createAsyncThunk("products/fetchProducts", async ()=>{
     const result = await axios.get("https://dummyjson.com/products")
-    console.log(result.data.products);
+    // console.log(result.data.products);
+    sessionStorage.setItem("allProducts",JSON.stringify(result.data.products))
     return result.data.products
     
 })
@@ -39,3 +40,5 @@ const productsSlice = createSlice({
         })
     }
 })
+
+export default productsSlice.reducer

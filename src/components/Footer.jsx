@@ -1,46 +1,51 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 const Footer = () => {
   return (
-    <div style={{ height: '300px' }} className='w-full bg-yellow-500 pt-36'>
-    <div className="flex justify-between">
-      <div style={{ width: '400px' }} className="intro">
-        <h5><i className='fa-solid fa-truck me-2'></i><span className='text-red'>ECart Application</span></h5>
-        <p>Designed and built with all the love in the world by the Luminar team with the help of our contributors.</p>
-        <p>Code liscenced Luminar, docs CC BY 3.0.</p>
-        <p>Currently v5.3.2.</p>
-      </div>
-      <div className="">
-        <h5>Links</h5>
-        <Link to={'/'} style={{ textDecoration: 'none', color:'black' }}>Home Page</Link> <br />
-        <Link to={'/home'} style={{ textDecoration: 'none', color:'black' }}>Cart Page</Link> <br />
-        <Link to={'/history'} style={{ textDecoration: 'none', color:'black' }}>Wishlist Page</Link>
-      </div>
-      <div className="">
-        <h5>Guides</h5>
-        <a href="https://react.dev/" style={{ textDecoration: 'none', color:'black' }} target='_blank'>React</a> <br />
-        <a href="https://react-bootstrap.github.io/" style={{ textDecoration: 'none', color:'black' }} target='_blank'>React Bootstrap</a> <br />
-        <a href="https://reactrouter.com/en/main" style={{ textDecoration: 'none', color:'black' }} target='_blank'>React Router</a>
-      </div>
-      <div className="">
-        <h5>Contact Us</h5>
-        <div className='pt-1'>
-          <input placeholder='Enter your email here' type="text" className='form-control rounded' />
-          <button className='btn btn-info ms-1'><i className='fa-solid fa-arrow-right'></i></button>
-        </div>
-        <div className='flex gap-3 pt-1'>
-          <a href="" style={{ textDecoration: 'none', color:'black' }} target='_blank'><i className='fa-brands fa-twitter'></i></a>
-          <a href="" style={{ textDecoration: 'none', color:'black' }} target='_blank'><i className='fa-brands fa-instagram'></i></a>
-          <a href="" style={{ textDecoration: 'none', color:'black' }} target='_blank'><i className='fa-brands fa-facebook'></i></a>
-          <a href="" style={{ textDecoration: 'none', color:'black' }} target='_blank'><i className='fa-brands fa-linkedin'></i></a>
-          <a href="" style={{ textDecoration: 'none', color:'black' }} target='_blank'><i className='fa-brands fa-github'></i></a>
-          <a href="" style={{ textDecoration: 'none', color:'black' }} target='_blank'><i className='fa-solid fa-phone'></i></a>
-        </div>
-      </div>
-    </div>
-    <p className='text-center mt-3'>Copyright &copy: June 2024 Batch ,Ecart . Built with React .
-    </p>
-  </div>
+    <>
+      <div className='bg-blue-600 text-white px-3 py-10 flex justify-between'>
+         <div className='w-1/4'>
+         <h1 className='font-bold text-xl mb-2'><i class="fa-solid fa-truck"></i> Daily Truck</h1><br />
+         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus commodi, quisquam animi, exercitationem dolorem tenetur nobis blanditiis ea voluptatem cupiditate labore placeat sunt, ab vitae molestias nemo eaque necessitatibus. Omnis?
+         <br />
+         Current Version v5.3
+
+          </div> 
+
+          <div>
+            <h1 className='font-bold text-xl mb-2'>Links</h1>
+            <ul>
+              <li>
+                <Link to={'/'}>Home</Link>
+              </li>
+              <li>
+                <Link to={'/cart'}>Cart</Link>
+              </li> 
+              <li>
+                <Link to={'/wishlist'}>Wishlist</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h1 className='font-bold text-xl mb-2'>Guides</h1>
+            <h5>React</h5>
+            <h5>React Bootstrap</h5>
+            <h5>React Router </h5>
+          </div>
+
+          <div>
+            <h1 className='font-bold text-xl mb-2'>Contact</h1>
+            <input type="text" placeholder='enter your email'className='rounded pl-3 mb-4' />
+            <ul className='flex justify-between'>
+              <li><i class="fa-brands fa-instagram"></i></li>
+              <li><i class="fa-brands fa-facebook"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-youtube"></i></li>
+            </ul>
+          </div>
+      </div>    
+    </>
   )
 }
 
